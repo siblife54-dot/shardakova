@@ -1,6 +1,11 @@
 "use strict";
 
 const plansList = document.getElementById("plans-list");
+const currency = new Intl.NumberFormat("ru-RU", {
+  style: "currency",
+  currency: "RUB",
+  maximumFractionDigits: 0,
+});
 
 window.LANDING_CONFIG.plans.forEach((plan) => {
   const card = document.createElement("article");
@@ -14,7 +19,26 @@ window.LANDING_CONFIG.plans.forEach((plan) => {
 
   const price = document.createElement("p");
   price.className = "plan-price";
-  price.textContent = plan.price;
+
+  const currentPrice = document.createElement("span");
+  currentPrice.className = "plan-current-price";
+  currentPrice.textContent = currency.format(plan.price);
+  price.append(currentPrice);
+
+  const discount = document.createElement("p");
+  discount.className = "plan-discount";
+  if (plan.oldPrice > plan.price) {
+    const oldPrice = document.createElement("s");
+    oldPrice.className = "plan-old-price";
+    const oldPriceLabel = document.createElement("span");
+    oldPriceLabel.className = "visually-hidden";
+    oldPriceLabel.textContent = "Прежняя цена: ";
+    oldPrice.append(oldPriceLabel, currency.format(plan.oldPrice));
+    price.append(oldPrice);
+
+    const percent = Math.round((1 - plan.price / plan.oldPrice) * 100);
+    discount.textContent = `Скидка ≈ ${percent}%`;
+  }
 
   const description = document.createElement("p");
   description.className = "plan-description";
@@ -23,7 +47,8 @@ window.LANDING_CONFIG.plans.forEach((plan) => {
   const button = document.createElement("button");
   button.className = "button";
   button.type = "button";
-  button.textContent = `Купить ${plan.name.toLocaleLowerCase("ru-RU")}`;
+  button.textContent = "Купить";
+  button.setAttribute("aria-label", `Купить: ${plan.name}`);
 
   const message = document.createElement("p");
   message.className = "plan-message";
@@ -51,6 +76,6 @@ window.LANDING_CONFIG.plans.forEach((plan) => {
     window.location.assign(destination.href);
   });
 
-  card.append(title, price, description, button, message);
+  card.append(title, price, discount, description, button, message);
   plansList.append(card);
 });
