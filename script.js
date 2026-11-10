@@ -55,12 +55,17 @@ window.LANDING_CONFIG.plans.forEach((plan) => {
   message.setAttribute("role", "status");
   message.setAttribute("aria-atomic", "true");
 
+  // Пока материалы или страница оплаты не готовы, запрещаем оформление заказа.
+  const canBuy = plan.contentReady === true && Boolean(plan.paymentUrl?.trim());
+  if (!canBuy) {
+    button.disabled = true;
+    button.textContent = "Скоро";
+    message.textContent = plan.contentReady ? "Подключаем оплату" : "Программа готовится";
+  }
+
   button.addEventListener("click", () => {
+    if (!canBuy) return;
     const paymentUrl = plan.paymentUrl.trim();
-    if (!paymentUrl) {
-      message.textContent = "Оплата скоро будет доступна";
-      return;
-    }
 
     // Только переход к оплате. Ни URL, ни редирект не подтверждают покупку.
     let destination;
