@@ -36,7 +36,7 @@ window.LANDING_CONFIG = {
       oldPrice: 1000,
       description: "Описание программы будет добавлено позже.",
       contentReady: true,
-      paymentUrl: "",
+      paymentUrl: "https://shardakovaclub.ru/buy-zaryadki",
     },
     {
       id: "plan_5",
