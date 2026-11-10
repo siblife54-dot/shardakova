@@ -82,7 +82,8 @@ h2 { margin: 0 0 24px; font-size: 1.75rem; }
   overflow-wrap: anywhere;
 }
 
-.button:hover { background: #1e3a8a; }
+.button:hover:not(:disabled) { background: #1e3a8a; }
+.button:disabled { background: #94a3b8; color: #fff; cursor: not-allowed; }
 .button:focus-visible { outline: 3px solid #0f172a; outline-offset: 4px; }
 .plan-message { margin: 16px 0 0; color: #334155; font-size: 0.9375rem; }
 .plan-message:empty { margin: 0; }
