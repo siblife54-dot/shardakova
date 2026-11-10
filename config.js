@@ -3,11 +3,11 @@ window.LANDING_CONFIG = {
   plans: [
     {
       id: "plan_1",
-      name: "Тренировки на жопу",
+      name: "Сочные ягодицы",
       price: 990,
       oldPrice: 1500,
       description: "Описание программы будет добавлено позже.",
-      paymentUrl: "", // Отдельная HTTPS-ссылка оплаты этого тарифа.
+      paymentUrl: "https://shardakovaclub.ru/buy-yagoditsy", // Оформление заказа GetCourse для «Сочные ягодицы».
       telegramBotUrl: "", // Резерв для будущей серверной интеграции.
     },
     {
