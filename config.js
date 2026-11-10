@@ -45,7 +45,7 @@ window.LANDING_CONFIG = {
       oldPrice: 2000,
       description: "Описание программы будет добавлено позже.",
       contentReady: true,
-      paymentUrl: "",
+      paymentUrl: "https://shardakovaclub.ru/buy-pohudenie",
     },
     {
       id: "plan_6",
