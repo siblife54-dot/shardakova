@@ -12,40 +12,16 @@
   <body>
     <main>
       <section class="hero" aria-labelledby="page-title">
-        <div class="hero-inner">
-          <p class="hero-eyebrow">ИЗБРАННОЕ ИЗ КЛУБА «ШАРМ»</p>
-          <div class="hero-art">
-            <p class="hero-date">11.11</p>
-            <div class="hero-stage">
-              <div class="hero-orbit" aria-hidden="true"></div>
-              <img class="hero-photo hero-photo-main"
-                src="./photo/hero/main-480.webp"
-                srcset="./photo/hero/main-480.webp 480w, ./photo/hero/main-960.webp 960w"
-                sizes="(min-width: 760px) 260px, (max-width: 370px) 164px, (max-height: 740px) 164px, 218px"
-                width="480" height="600" fetchpriority="high"
-                alt="Настя Шардакова с розовым пузырём жвачки">
-              <img class="hero-photo hero-photo-left" src="./photo/hero/portrait-240.webp"
-                width="240" height="300" alt="" decoding="async">
-              <img class="hero-photo hero-photo-right" src="./photo/hero/detail-240.webp"
-                width="240" height="300" alt="" decoding="async">
-              <svg class="hero-spark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M24 2v44M2 24h44M8 8l32 32M8 40 40 8"/>
-              </svg>
-            </div>
-            <p class="hero-offer">Специальные цены <strong>до 18 ноября</strong></p>
-          </div>
-          <div class="hero-copy">
-            <h1 id="page-title">Лучшие тренировки<br>Насти Шардаковой:</h1>
-            <p class="hero-description">Ягодицы, осанка, живот и работа с отёчностью</p>
-            <p class="hero-invitation">Выбери то, чему хочется уделить внимание сейчас</p>
-            <a class="hero-cta" href="#plans">Выбрать тренировки
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 19 19 5M5 5h14v14"/>
-              </svg>
-            </a>
-            <p class="hero-note">Доступ 2 месяца, тренировки для дома и зала</p>
-          </div>
-        </div>
+        <h1 id="page-title" class="visually-hidden">Самые эффективные тренировки от Насти Шардаковой</h1>
+        <picture class="hero-picture">
+          <source srcset="./assets/hero-final.webp" type="image/webp">
+          <img class="hero-image" src="./assets/hero-final.png"
+            width="941" height="1671" loading="eager" fetchpriority="high"
+            alt="Настя Шардакова. Распродажа 11.11: специальные цены до 18 ноября. Доступ 2 месяца. Тренировки для дома и зала.">
+        </picture>
+        <a class="hero-cta" href="#plans">
+          <span class="visually-hidden">Выбрать тренировки</span>
+        </a>
       </section>
 
       <section class="plans-section container" id="plans" aria-labelledby="plans-title">
