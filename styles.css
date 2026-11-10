@@ -16,20 +16,11 @@ body { margin: 0; }
   padding-bottom: 64px;
 }
 
-.hero { padding-block: 80px 64px; }
-
 h1, h2, h3 { line-height: 1.2; }
 
-h1 {
-  max-width: 780px;
-  margin: 0 0 20px;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  letter-spacing: -0.025em;
-}
-
-.subtitle { margin: 0 0 28px; font-size: 1.125rem; color: #475569; }
-
 h2 { margin: 0 0 24px; font-size: 1.75rem; }
+
+.plans-section { padding-top: 64px; scroll-margin-top: 24px; }
 
 .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 
@@ -89,7 +80,140 @@ h2 { margin: 0 0 24px; font-size: 1.75rem; }
 .plan-message:empty { margin: 0; }
 
 @media (max-width: 760px) {
-  .hero { padding-block: 48px; }
   .plans { grid-template-columns: 1fr; }
   .plan { padding: 24px; }
+}
+
+/* Campaign hero: isolated styles keep the existing catalog intact. */
+html { scroll-behavior: smooth; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  color: #472e30;
+  background: radial-gradient(ellipse at 85% 30%, #edc4ca 0, transparent 48%),
+    radial-gradient(ellipse at 8% 62%, #eed6ca 0, transparent 50%), #f5e9df;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid #98576026;
+  border-radius: 180px 180px 0 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.hero-inner { max-width: 1100px; margin: auto; padding: 28px 24px 32px; text-align: center; }
+.hero-eyebrow { margin: 0 0 14px; font-size: 10px; font-weight: 650; letter-spacing: .18em; }
+.hero-art { position: relative; max-width: 370px; margin-inline: auto; }
+.hero-date {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #85454d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(108px, 35vw, 144px);
+  font-weight: 400;
+  letter-spacing: -.08em;
+  line-height: .88;
+  padding-right: .08em;
+}
+.hero-stage { position: relative; height: 286px; margin-top: -6px; }
+.hero-photo { position: absolute; display: block; object-fit: cover; box-shadow: 0 14px 26px #66363825; }
+.hero-photo-main {
+  width: 218px;
+  height: 272px;
+  left: calc(50% - 109px);
+  top: 0;
+  z-index: 2;
+  border-radius: 110px 110px 12px 12px;
+  transform: rotate(-5deg);
+}
+.hero-photo-left {
+  width: 74px;
+  height: 93px;
+  top: 36px;
+  left: -4px;
+  border: 4px solid #fff7ee;
+  transform: rotate(-15deg);
+  animation: hero-float-left 7s ease-in-out infinite;
+}
+.hero-photo-right {
+  width: 78px;
+  height: 98px;
+  top: 18px;
+  right: -4px;
+  border: 4px solid #fff7ee;
+  transform: rotate(13deg);
+  animation: hero-float-right 8s ease-in-out infinite;
+}
+.hero-orbit {
+  position: absolute;
+  width: 100%;
+  height: 168px;
+  left: 0;
+  top: 72px;
+  border: 1px solid #98576050;
+  border-radius: 50%;
+  transform: rotate(-24deg);
+}
+.hero-offer {
+  position: absolute;
+  z-index: 3;
+  bottom: 8px;
+  right: -6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 112px;
+  height: 112px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #91545e35;
+  border-radius: 50%;
+  background: #f3ccd3;
+  color: #69333e;
+  box-shadow: 0 8px 20px #66363815;
+  font-size: 11px;
+  line-height: 1.35;
+  transform: rotate(9deg);
+}
+.hero-offer strong { margin-top: 5px; font-family: Georgia, serif; font-size: 20px; font-weight: 400; }
+.hero-spark { position: absolute; left: 6px; bottom: 24px; color: #85454d; width: 48px; height: 48px; }
+.hero-copy { position: relative; z-index: 4; margin-top: 12px; }
+.hero-copy h1 { margin: 0 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(26px, 7vw, 32px); font-weight: 400; line-height: 1.1; letter-spacing: -.035em; }
+.hero-description { max-width: 340px; margin: 0 auto 7px; font-size: 14px; line-height: 1.4; }
+.hero-invitation { max-width: 310px; margin: 0 auto 18px; font-size: 12px; line-height: 1.5; color: #74595b; }
+.hero-cta { display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; max-width: 340px; min-height: 54px; margin-inline: auto; padding: 14px 22px; border: 1px solid #78424c; border-radius: 4px; color: #fff8f0; background: #78424c; text-decoration: none; font-size: 15px; font-weight: 600; box-shadow: 0 6px 18px #66363818; }
+.hero-cta svg { width: 24px; height: 24px; flex-shrink: 0; }
+.hero-cta:hover { background: #63333e; }
+.hero-cta:focus-visible { outline: 3px solid #472e30; outline-offset: 5px; }
+.hero-note { margin: 12px 0 0; font-size: 10px; color: #74595b; }
+.hero-eyebrow, .hero-art, .hero-copy { animation: hero-enter .7s ease-out both; }
+.hero-art { animation-delay: .08s; }
+.hero-copy { animation-delay: .16s; }
+@keyframes hero-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes hero-float-left { 50% { transform: translateY(-6px) rotate(-11deg); } }
+@keyframes hero-float-right { 50% { transform: translateY(6px) rotate(10deg); } }
+@media (min-width: 760px) {
+  .hero-inner { padding-block: 36px 48px; }
+  .hero::before { inset: 24px; border-radius: 360px 360px 0 0; }
+  .hero-eyebrow { font-size: 12px; letter-spacing: .22em; margin-bottom: 12px; }
+  .hero-art { max-width: 660px; }
+  .hero-date { font-size: 244px; line-height: .82; }
+  .hero-stage { height: 338px; margin-top: -32px; }
+  .hero-photo-main { width: 260px; height: 325px; left: calc(50% - 130px); border-radius: 130px 130px 12px 12px; }
+  .hero-photo-left { width: 124px; height: 155px; left: 50px; top: 100px; }
+  .hero-photo-right { width: 124px; height: 155px; right: 52px; top: 42px; }
+  .hero-offer { right: 100px; bottom: 4px; width: 128px; height: 128px; font-size: 12px; }
+  .hero-offer strong { font-size: 23px; }
+  .hero-spark { left: 160px; bottom: 10px; }
+  .hero-copy h1 { font-size: 40px; }
+  .hero-description { max-width: none; font-size: 16px; }
+  .hero-invitation { max-width: none; font-size: 14px; }
+  .hero-note { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-eyebrow, .hero-art, .hero-copy, .hero-photo-left, .hero-photo-right { animation: none; }
 }
