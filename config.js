@@ -18,7 +18,7 @@ window.LANDING_CONFIG = {
       oldPrice: 1500,
       description: "Два тренинга в одном тарифе: «Ровная осанка, избавление от боли» и «Комплексы против отёков».",
       contentReady: true,
-      paymentUrl: "",
+      paymentUrl: "https://shardakovaclub.ru/buy-osanka-oteki",
     },
     {
       id: "plan_3",
