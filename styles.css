@@ -117,23 +117,7 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 
-/* Nastya's quote: local campaign typefaces. */
-@font-face {
-  font-family: "Sharm Editorial";
-  src: url("./photo/hero/fonts/story-roman.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sharm Editorial";
-  src: url("./photo/hero/fonts/story-italic.woff2") format("woff2");
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-}
-
+/* Nastya's quote: one self-hosted typeface throughout. */
 @font-face {
   font-family: "Sharm Sans";
   src: url("./photo/hero/fonts/campaign-sans.woff2") format("woff2");
@@ -158,10 +142,11 @@ html { scroll-behavior: smooth; }
   width: 100%;
   max-width: 480px;
   margin-inline: auto;
-  padding: 26px 20px 36px;
+  padding: 24px 20px 32px;
   background: linear-gradient(180deg, #f5deda, #f8ebe7);
   font-family: "Sharm Sans", sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  font-style: normal;
   line-height: 1.65;
 }
 
@@ -176,33 +161,19 @@ html { scroll-behavior: smooth; }
 }
 
 .nastya-quote-text { margin: 0; }
-.nastya-quote-text p { margin: 0 0 20px; }
-.nastya-quote-text strong { font-weight: 600; }
+.nastya-quote-text p { margin: 0 0 24px; }
+.nastya-quote-text strong { font-weight: 500; }
 
 .nastya-quote-text .nastya-quote-opening {
-  margin-bottom: 18px;
   color: #fff3ed;
-  font-family: "Sharm Editorial", Georgia, serif;
-  font-size: clamp(1.875rem, 8.1vw, 2.375rem);
+  font-size: 1.125rem;
   font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-}
-
-.nastya-quote-text .nastya-quote-thought {
-  margin-block: 26px;
-}
-
-.nastya-quote-thought em {
-  display: block;
-  margin-top: 6px;
-  color: #ffd3cf;
-  font-family: "Sharm Editorial", Georgia, serif;
-  font-size: clamp(2rem, 8.7vw, 2.625rem);
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.08;
+  line-height: 1.5;
   text-wrap: balance;
+}
+
+.nastya-quote-thought strong {
+  color: #ffd3cf;
 }
 
 .nastya-quote-text p:last-child { margin-bottom: 0; }
@@ -211,13 +182,13 @@ html { scroll-behavior: smooth; }
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 26px;
-  padding-top: 20px;
+  margin-top: 24px;
+  padding-top: 24px;
   border-top: 1px solid #f5e3df30;
   color: #fff3ed;
   font-size: 0.875rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .nastya-quote-author img {
