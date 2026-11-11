@@ -69,7 +69,10 @@ window.LANDING_CONFIG.plans.forEach((plan, index) => {
 
   const description = document.createElement("p");
   description.className = "plan-description";
-  description.textContent = plan.description;
+  plan.description.split("\n").forEach((line, index) => {
+    if (index > 0) description.append(document.createElement("br"));
+    description.append(document.createTextNode(line));
+  });
 
   const button = document.createElement("button");
   button.className = "button";
