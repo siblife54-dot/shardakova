@@ -624,3 +624,38 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   .proof-card { transition: none; }
 }
+
+/* Support continues the reviews section with the existing campaign typography and button. */
+.support-section {
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  padding: 28px 20px 48px;
+  background: #f9e4e0;
+  color: #702a35;
+  font-family: "Sharm Sans", sans-serif;
+}
+
+.support-section h2 {
+  margin: 0 0 12px;
+  color: #8d2638;
+  font-family: "Sharm Editorial", Georgia, serif;
+  font-size: clamp(2rem, 8.8vw, 2.65rem);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+.support-section p {
+  max-width: 30ch;
+  margin: 0 0 22px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.support-section .button {
+  min-height: 48px;
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
