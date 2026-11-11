@@ -71,8 +71,8 @@ window.LANDING_CONFIG = {
       image: "./photo/plans/gym.webp",
       imagePosition: "50% 76%",
       imageScale: 1.3,
-      contentReady: false,
-      paymentUrl: "",
+      contentReady: true,
+      paymentUrl: "https://shardakovaclub.ru/buy-zal",
     },
     {
       id: "plan_all",
