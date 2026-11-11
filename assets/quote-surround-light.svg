@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 992 1586" fill="none" preserveAspectRatio="none">
+  <defs>
+    <filter id="glow" x="-25%" y="-100%" width="150%" height="300%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="soft"/>
+      <feMerge><feMergeNode in="soft"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="#fffaf5" opacity=".45">
+    <path d="M-70-22C100 12 133 84 274 51S448 53 545 77 785 84 1038-60L1038-42C785 99 655 101 542 84S407 41 276 61 100 24-70-12Z"/>
+    <path d="M-67 1422C75 1551 150 1594 276 1543S465 1529 575 1547 827 1486 1046 1317L1046 1343C827 1512 677 1590 571 1555S390 1547 277 1553 75 1578-67 1438Z"/>
+  </g>
+  <g stroke="#fffaf5" filter="url(#glow)">
+    <path d="M-66-30C104 19 141 94 279 53S449 45 545 76 785 84 1038-60" stroke-width="3" opacity=".9"/>
+    <path d="M-80-9C118 37 163 71 290 55S476 111 610 81 804 15 1017-47" stroke-width="7" opacity=".5"/>
+    <path d="M-42 1408C82 1565 125 1538 225 1513S389 1528 519 1550 835 1518 1030 1335" stroke-width="3" opacity=".9"/>
+    <path d="M-67 1422C75 1551 150 1594 276 1543S465 1529 575 1547 827 1486 1046 1317" stroke-width="6" opacity=".65"/>
+  </g>
+</svg>
