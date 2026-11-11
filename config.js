@@ -83,8 +83,8 @@ window.LANDING_CONFIG = {
       image: "./photo/plans/collection.webp",
       imagePosition: "50% 0%",
       isBundle: true,
-      contentReady: false,
-      paymentUrl: "",
+      contentReady: true,
+      paymentUrl: "https://shardakovaclub.ru/buy-all",
     },
   ],
 };
