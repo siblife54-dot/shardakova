@@ -14,9 +14,9 @@ window.LANDING_CONFIG.plans.forEach((plan, index) => {
   card.id = plan.id;
   card.setAttribute("aria-labelledby", `${plan.id}-title`);
 
-  if (!isBundle && plan.image) {
+  if (plan.image) {
     const photo = document.createElement("div");
-    photo.className = "plan-photo";
+    photo.className = isBundle ? "plan-bundle-portrait" : "plan-photo";
     const image = document.createElement("img");
     image.src = plan.image;
     image.alt = "";
@@ -35,7 +35,7 @@ window.LANDING_CONFIG.plans.forEach((plan, index) => {
   content.className = "plan-copy";
   const label = document.createElement("p");
   label.className = isBundle ? "plan-offer-label" : "plan-number";
-  label.textContent = isBundle ? "Специальное предложение" : `${String(index + 1).padStart(2, "0")}.`;
+  label.textContent = isBundle ? "Выгодный комплект" : `${String(index + 1).padStart(2, "0")}.`;
   if (!isBundle) label.setAttribute("aria-hidden", "true");
 
   const title = document.createElement("h3");

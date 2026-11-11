@@ -10,3 +10,5 @@ no generative edits or retouching. Framing is controlled by CSS.
 - `lymph.webp`: `IMG_5526.jpg`
 - `weightloss.webp`: `IMG_5510.jpg`
 - `gym.webp`: `IMG_5489.jpg`
+
+- `collection.webp`: owner-supplied portrait `IMG_5352 копия.jpg`, also supplied as the collection reference; optimized without retouching.

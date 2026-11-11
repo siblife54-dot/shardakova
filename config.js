@@ -80,6 +80,8 @@ window.LANDING_CONFIG = {
       price: 3490,
       oldPrice: 9500,
       description: "Все шесть программ в одном комплекте.",
+      image: "./photo/plans/collection.webp",
+      imagePosition: "50% 0%",
       isBundle: true,
       contentReady: false,
       paymentUrl: "",

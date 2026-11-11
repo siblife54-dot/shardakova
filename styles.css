@@ -390,10 +390,12 @@ html { scroll-behavior: smooth; }
 .plan-message { margin: 6px 0 0; color: #865d65; font-size: 0.6875rem; line-height: 1.4; }
 .plan-message:empty { display: none; }
 
-.plan-bundle {
+.plan.plan-bundle {
   position: relative;
   isolation: isolate;
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 36%) minmax(0, 1fr);
+  gap: 0 14px;
   margin-top: 2px;
   padding: 22px;
   border: 1px solid #fff7ef;
@@ -414,6 +416,35 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
 }
 
+.plan-bundle .plan-copy { display: contents; }
+.plan-bundle .plan-offer-label,
+.plan-bundle h3,
+.plan-bundle .plan-description { grid-column: 2; }
+.plan-bundle .plan-price,
+.plan-bundle .button,
+.plan-bundle .plan-message { grid-column: 1 / -1; }
+
+.plan-bundle-portrait {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1 / 4;
+  min-width: 0;
+  margin: -22px -8px 0 -22px;
+  overflow: hidden;
+  border-radius: 26px 0 0;
+  mask-image: linear-gradient(90deg, #000 80%, transparent);
+}
+
+.plan-bundle-portrait img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(#000 78%, transparent);
+}
+
 .plan-offer-label {
   align-self: flex-start;
   margin: 0 0 10px;
@@ -428,8 +459,8 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
 }
 
-.plan-bundle h3 { margin-bottom: 8px; color: #fff1e5; font-size: clamp(2.25rem, 10.4vw, 3.125rem); }
-.plan-bundle .plan-description { margin: 0 0 20px; color: #fff8f0; font-size: 0.9375rem; }
+.plan-bundle h3 { margin-bottom: 8px; color: #fff1e5; font-size: clamp(1.875rem, 8.2vw, 2.45rem); }
+.plan-bundle .plan-description { margin: 0 0 14px; color: #fff8f0; font-size: 0.8125rem; }
 .plan-bundle .plan-price { gap: 8px 14px; margin: 0 0 18px; }
 .plan-bundle .plan-current-price { color: #fff7ec; font-size: clamp(2.5rem, 11.6vw, 3.5rem); }
 .plan-bundle .plan-old-price { color: #ffe4dc; font-size: 1.125rem; }
