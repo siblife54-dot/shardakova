@@ -29,14 +29,14 @@ window.LANDING_CONFIG = {
     {
       id: "plan_3",
       name: "Плоский живот + тазовое дно",
-      price: 790,
+      price: 890,
       oldPrice: 1500,
       description: "Упражнения для живота и мышц тазового дна.",
       image: "./photo/plans/core.webp",
       imagePosition: "20% 8%",
       imageScale: 1.65,
-      contentReady: false,
-      paymentUrl: "",
+      contentReady: true,
+      paymentUrl: "https://shardakovaclub.ru/buy-zhivot",
     },
     {
       id: "plan_4",
