@@ -659,3 +659,34 @@ html { scroll-behavior: smooth; }
   font-size: 0.9375rem;
   text-decoration: none;
 }
+
+.site-footer {
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  padding: 24px 20px 30px;
+  border-top: 1px solid #b75d6e33;
+  background: #f9e4e0;
+  color: #702a35;
+  font-family: "Sharm Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.site-footer-name { margin: 0 0 10px; font-size: 0.875rem; font-weight: 500; }
+.site-footer-requisites { margin: 0 0 12px; }
+.site-footer-links { display: flex; flex-direction: column; }
+.site-footer-links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 8px;
+  color: #8d2638;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.site-footer-links a:focus-visible { outline: 2px solid #8d2638; outline-offset: 3px; border-radius: 4px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .site-footer-links a:hover { color: #702a35; text-decoration-thickness: 2px; }
+}
