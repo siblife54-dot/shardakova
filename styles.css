@@ -116,3 +116,121 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Nastya's quote: local campaign typefaces. */
+@font-face {
+  font-family: "Sharm Editorial";
+  src: url("./photo/hero/fonts/story-roman.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharm Editorial";
+  src: url("./photo/hero/fonts/story-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sharm Sans";
+  src: url("./photo/hero/fonts/campaign-sans.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 650;
+  font-display: swap;
+}
+
+/* Only the final 58 background pixels of the 1671px artwork are blended.
+   The photograph, CTA, lettering and feature line are above this area. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: calc(100% * 58 / 1671);
+  background: linear-gradient(to bottom, #f5deda00, #f5deda);
+  pointer-events: none;
+}
+
+
+.nastya-quote {
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+  padding: 26px 20px 36px;
+  background: linear-gradient(180deg, #f5deda, #f8ebe7);
+  font-family: "Sharm Sans", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.nastya-quote-card {
+  margin: 0;
+  padding: 28px;
+  border: 1px solid #ffffff26;
+  border-radius: 22px;
+  background: #682835;
+  color: #f5e3df;
+  box-shadow: 0 12px 30px #59233214;
+}
+
+.nastya-quote-text { margin: 0; }
+.nastya-quote-text p { margin: 0 0 20px; }
+.nastya-quote-text strong { font-weight: 600; }
+
+.nastya-quote-text .nastya-quote-opening {
+  margin-bottom: 18px;
+  color: #fff3ed;
+  font-family: "Sharm Editorial", Georgia, serif;
+  font-size: clamp(1.875rem, 8.1vw, 2.375rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.nastya-quote-text .nastya-quote-thought {
+  margin-block: 26px;
+}
+
+.nastya-quote-thought em {
+  display: block;
+  margin-top: 6px;
+  color: #ffd3cf;
+  font-family: "Sharm Editorial", Georgia, serif;
+  font-size: clamp(2rem, 8.7vw, 2.625rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.nastya-quote-text p:last-child { margin-bottom: 0; }
+
+.nastya-quote-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #f5e3df30;
+  color: #fff3ed;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.nastya-quote-author img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+@media (max-width: 350px) {
+  .nastya-quote { padding-inline: 16px; }
+  .nastya-quote-card { padding: 24px; }
+}
