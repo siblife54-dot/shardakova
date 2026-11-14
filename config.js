@@ -76,7 +76,7 @@ window.LANDING_CONFIG = {
     },
     {
       id: "plan_all",
-      name: "Вся коллекция",
+      name: "Вся коллекция тренировок",
       price: 3490,
       oldPrice: 10500,
       description: "А также, бонусом:",
