@@ -114,6 +114,16 @@ window.LANDING_CONFIG.plans.forEach((plan, index) => {
   });
 
   content.append(label, title, description, price, button, message);
+  if (isBundle && Array.isArray(plan.bonuses)) {
+    const bonuses = document.createElement("ul");
+    bonuses.className = "plan-bonuses";
+    plan.bonuses.forEach((text) => {
+      const item = document.createElement("li");
+      item.textContent = text;
+      bonuses.append(item);
+    });
+    content.insertBefore(bonuses, price);
+  }
   card.append(content);
   plansList.append(card);
 });
