@@ -5,8 +5,8 @@ window.LANDING_CONFIG = {
     {
       id: "plan_1",
       name: "Сочные ягодицы в 3D технике",
-      price: 990,
-      oldPrice: 2000,
+      price: 1990,
+      oldPrice: 0,
       description: "5 тренировок\n+ работа с тазобедренными суставами\n+ МФР растяжка\n\nФормат «повторяй за мной» - до 40 минут.",
       image: "./photo/plans/glutes.webp",
       imagePosition: "38% 76%",
@@ -17,8 +17,8 @@ window.LANDING_CONFIG = {
     {
       id: "plan_2",
       name: "Ровная и красивая спинка + тело без отеков",
-      price: 990,
-      oldPrice: 2000,
+      price: 1990,
+      oldPrice: 0,
       description: "10 тренировок\n+ Работа с тазобедренными суставами\n+ МФР растяжка\n\nФормат «повторяй за мной»\nпо 5–15 минут.",
       image: "./photo/plans/posture.webp",
       imagePosition: "50% 65%",
@@ -29,8 +29,8 @@ window.LANDING_CONFIG = {
     {
       id: "plan_3",
       name: "Плоский живот + тазовое дно",
-      price: 890,
-      oldPrice: 1500,
+      price: 1490,
+      oldPrice: 0,
       description: "6 тренировок\n+ Работа с тазобедренными суставами\n+ МФР растяжка\n\nФормат «повторяй за мной»\nпо 10–20 минут.",
       image: "./photo/plans/core.webp",
       imagePosition: "20% 8%",
@@ -41,8 +41,8 @@ window.LANDING_CONFIG = {
     {
       id: "plan_4",
       name: "Лимфодренажные зарядки",
-      price: 690,
-      oldPrice: 1000,
+      price: 990,
+      oldPrice: 0,
       description: "5 зарядок по 5–15 минут\n\n+ Работа с тазобедренными суставами\n+ МФР растяжка",
       image: "./photo/plans/lymph.webp",
       imagePosition: "50% 70%",
@@ -53,8 +53,8 @@ window.LANDING_CONFIG = {
     {
       id: "plan_5",
       name: "Похудение и рельеф",
-      price: 990,
-      oldPrice: 2000,
+      price: 1990,
+      oldPrice: 0,
       description: "17 тренировок в формате «повторяй за мной» до 40 минут\n+ МФР и Тазобедренные суставы",
       image: "./photo/plans/weightloss.webp",
       imagePosition: "50% 76%",
@@ -65,8 +65,8 @@ window.LANDING_CONFIG = {
     {
       id: "plan_6",
       name: "Тренировки для зала",
-      price: 990,
-      oldPrice: 2000,
+      price: 1990,
+      oldPrice: 0,
       description: "16 упражнений на все тело с объяснением техники\n\n+ МФР растяжка для быстрого восстановления\n+ Работа с тазобедренными суставами",
       image: "./photo/plans/gym.webp",
       imagePosition: "50% 76%",
@@ -77,8 +77,8 @@ window.LANDING_CONFIG = {
     {
       id: "plan_all",
       name: "Вся коллекция тренировок",
-      price: 3490,
-      oldPrice: 10500,
+      price: 4990,
+      oldPrice: 10440,
       description: "А также, бонусом:",
       bonuses: [
         "Ленивые зарядки",
